@@ -40,6 +40,25 @@ int main() {
 	swap_char(c, d);
 	cout << "After swap\n" << "c = " << c << "    d = " << d << "\n";
 
+	int nums[10] = { 7,3,5,2,1,4,6,9,10,8 };
+
+	int swaps = 10;
+
+	while (swaps > 0) {
+		swaps = 0;
+		for (int i = 0; i < 9; i++)
+		{
+			if (nums[i] > nums[i + 1]) {
+				swap_ref(nums[i], nums[i + 1]);
+				swaps++;
+			}
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		cout << nums[i] << "\n";
+	}
+
 	/*int a, b;
 
 	cout << "Please type in a number" << "\n";
