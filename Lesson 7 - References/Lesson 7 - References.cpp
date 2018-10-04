@@ -24,8 +24,23 @@ void swap_ref(int& x, int& y) {
 	y = temp;
 }
 
+void swap_char(char& a, char& b) {
+	char temp = a;
+	a = b;
+	b = temp;
+}
+
 int main() {
-	int a, b;
+
+	int a;
+	char c = 'c';
+	char d = 'd';
+
+	cout << "c = " << c << "    d = " << d << "\n";
+	swap_char(c, d);
+	cout << "After swap\n" << "c = " << c << "    d = " << d << "\n";
+
+	/*int a, b;
 
 	cout << "Please type in a number" << "\n";
 	cin >> a;
@@ -41,7 +56,9 @@ int main() {
 	swap_ref(a, b);
 	cout << "after swap using references, a = " << a << " and b = " << b << "\n";
 
-	int& a_ref = a;
+	int& a_ref = a;*/
+
+	cin >> a;
 
 	return 0;
 }
